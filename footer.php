@@ -1,0 +1,1 @@
+<footer> All Rights Reserved @2015</footer>
