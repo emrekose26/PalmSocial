@@ -1,3 +1,117 @@
 body,html{
 	font-family: 'Open Sans',sans-serif;
 }
+/* header.php*/
+header{
+	height: 80px;  width: 100%;  background-color: #8BC34A;
+}
+header img{
+	margin-left: 60px; height: 75px; width: 250px;
+}
+#login{
+	float: right;  margin-right: 50px;  margin-top: 15px;
+}
+#login form ul li{
+	float: left;  margin-left:25px ;
+}
+#login form ul label{
+	color:#fff;
+}
+#login form ul a{
+	text-decoration: none; color: #01579B;
+}
+#login form #giris-ust-alan{
+	margin-top: -5px;
+}
+#login form #giris-alt-alan a{
+	color:#fff;
+}
+#login form #giris-alt-alan a:hover{
+	color:darkgreen;
+}
+#login form #giris-ust-alan input{
+	height: 30px; border-radius: 25px;
+}
+#login form #giris-alt-alan li{
+	margin-left: 115px;
+}
+#login form #giris-alt-alan li:last-child{
+	margin-left: 130px;
+}
+#login form fieldset button{
+	background-color: lightsteelblue; color:#fff;
+}
+
+
+/* content.php*/
+
+#content{
+	background-color: #DCEDC8;  width: 100%;  height: 650px;
+}
+#content img{
+	width: 100%; height: 750px; margin-top: 10px;
+}
+
+#content #description{
+	height: 500px; width: 600px; position: absolute; top:110px; float: left; border-radius: 25px;
+
+}
+#content #signupform{
+	background: rgba(255,255,255,0.5); height: 530px; width: 600px; position: absolute; top:100px; float: left; border-radius: 25px;
+}
+#content ul {
+	margin-left: 50px;
+}
+#content ul li:last-child{
+	margin-left:650px ;
+}
+#content #signupform h1{
+	font-size: 50px; font-weight: bold; margin-top: 30px; margin-left: 60px;
+}
+#content #signupform h3{
+	font-size:18px; font-weight: lighter; margin-top: 20px; margin-left: 60px;
+}
+#content #signupform form{
+	margin-top: 10px; margin-left: 60px;
+}
+#content #signupform label{
+	font-size: 15px; font-weight: normal;
+}
+#content #signupform input{
+	margin-left: 60px;
+}
+#signupform fieldset button{
+	width: 380px; margin-left: -125px; background-color:#8BC34A ; color: #fff; font-size: 20px; font-weight: lighter;
+}
+
+#description img{
+	height: 350px; width: 550px;
+}
+#description h1{
+	font-size: 40px; font-weight: bold; text-align: center;
+}
+#description h3{
+	font-size: 18px; font-weight: lighter; text-align: center;
+}
+
+/*footer.php*/
+footer{
+	position: absolute; top:700px; height: 120px; width: 100%; color: #74A33E; background-color: #fff;
+}
+footer img{
+	margin-top: -18px;
+}
+footer ul li a{
+	float: left; margin-left: 70px; margin-top: 50px; font-size: 18px; font-weight: lighter; color:#74A33E; text-decoration: none; padding: 5px;
+}
+footer ul li a:hover{
+	background-color: #74A33E; color:#fff;
+}
+footer ul li:first-child a:hover{
+	background: #fff;
+}
+footer ul li:last-child a:hover{
+	background: #fff; color:#74A33E; cursor: default;
+}
+
+
