@@ -17,6 +17,7 @@
 					switch($_GET['hata']){
 						case "alanlarbos": echo "Alanları Boş Bırakmayın"; break;
 						case "parolaFarkli" :echo "Parolalar uyuşmuyor";break;
+						case "kadiVar":echo "<strong>".$_GET['kadi']."</strong> kullanıcı adı kullanılıyor";break;
 					}
 				?>
 
@@ -27,17 +28,22 @@
 				<fieldset>
 					<div class="pure-control-group">
 						<label for="adsoyad">Ad Soyad:</label>
-						<input id="adsoyad" type="text" name="adsoyad" placeholder="Ad Soyad"/>
+						<input id="adsoyad" type="text" name="adsoyad" placeholder="Ad Soyad"
+							value="<?php if(isset($_GET['adsoyad'])){echo $_GET['adsoyad'];} ?>"
+							/>
 					</div>
 
 					<div class="pure-control-group">
 						<label for="eposta">E-posta:</label>
-						<input type="email" name="eposta" placeholder="Eposta adresi"/>
+						<input type="email" name="eposta" placeholder="Eposta adresi"
+							value="<?php if(isset($_GET['eposta'])){echo $_GET['eposta'];} ?>"/>
 					</div>
 
 					<div class="pure-control-group">
 						<label for="kadi">Kullanıcı Adı:</label>
-						<input type="text" name="kadi" placeholder="Kullanıcı Adı"/>
+						<input type="text" name="kadi" placeholder="Kullanıcı Adı"
+							value="<?php if(isset($_GET['kadi'])){ echo $_GET['kadi'];} ?>"
+							/>
 					</div>
 
 					<div class="pure-control-group">
