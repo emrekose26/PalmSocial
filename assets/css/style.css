@@ -94,6 +94,11 @@ header img{
 	font-size: 18px; font-weight: lighter; text-align: center;
 }
 
+#uyeKayitHata{
+	margin-left: 60px; margin-top: 10px; background:rgba(255, 44, 44, 0.5); width: 353px;
+	border:1px solid red; color:#fff; padding:3px 0 0 75px;
+}
+
 /*footer.php*/
 footer{
 	position: absolute; top:700px; height: 120px; width: 100%; color: #74A33E; background-color: #fff;

@@ -30,22 +30,3 @@
 		</form>
 	</div>
 </header>
-
-
-<!--
-<form class="pure-form">
-    <fieldset>
-        <legend>A compact inline form</legend>
-
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
-
-        <label for="remember">
-            <input id="remember" type="checkbox"> Remember me
-        </label>
-
-
-    </fieldset>
-</form>
-
--->

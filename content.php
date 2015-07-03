@@ -10,7 +10,11 @@
 			<h1>Kayıt Ol</h1>
 			<h3>Hemen ücretsiz üye olun!</h3>
 
-			<form action=""  method="post" class="pure-form pure-form-aligned">
+			<?php if(isset($_GET['hata'])):?>
+			<div id="uyeKayitHata">Hata var</div>
+			<?php endif; ?>
+
+			<form action="<?= $_SERVER['PHP_SELF']; ?>"  method="post" class="pure-form pure-form-aligned">
 				<fieldset>
 					<div class="pure-control-group">
 						<label for="adsoyad">Ad Soyad:</label>
@@ -43,7 +47,7 @@
 					</div>
 
 					<div class="pure-controls">
-						<button type="submit" class="pure-button">Kaydol</button>
+						<button type="submit" name="uyeKayitSubmit" class="pure-button">Kaydol</button>
 					</div>
 				</fieldset>
 			</form>

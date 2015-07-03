@@ -1,5 +1,38 @@
 <?php
-	require "db.php";
+	require_once "_inc/db.php";
+
+	if(isset($_POST['uyeKayitSubmit'])){
+
+		echo "<pre>";
+		print_r($_POST);
+
+		echo "</pre>";
+
+		//üye kayıt formundan gelen veriler
+		$kullanici_adi = mysql_real_escape_string($_POST['kadi']);
+		$eposta        = mysql_real_escape_string($_POST['eposta']);
+		$adsoyad       = mysql_real_escape_string($_POST['adsoyad']);
+		$sifre         = mysql_real_escape_string($_POST['sifre']);
+		$sifretekrar   = mysql_real_escape_string($_POST['sifretekrar']);
+		$dtarih        = mysql_real_escape_string($_POST['dtarih']);
+
+		//ip adresinin alınması
+		$kayitIP = $_SERVER['REMOTE_ADDR'];
+
+		if(!empty($kullanici_adi) && !empty($eposta)){
+			//parola işlemleri
+			if($sifre == $sifretekrar){
+
+			}else{
+				echo "<script>alert('parolalar uyuşmuyor');</script>";
+				header("Location:index.php?hata=parolaFarkli");
+			}
+
+
+		}else{
+			header("Location:index.php?hata=alanlarbos");
+		}
+	}
 ?>
 <!doctype html>
 <html lang="en">
