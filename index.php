@@ -56,6 +56,7 @@
 	<link rel="stylesheet" href="assets/css/reset.css"/>
 	<link rel="stylesheet" href="assets/css/style.css"/>
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css"/>
 
 	<!--Scripts-->
 	<script src="assets/js/jquery.min.js"></script>
