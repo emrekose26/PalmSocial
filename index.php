@@ -3,11 +3,6 @@
 
 	if(isset($_POST['uyeKayitSubmit'])){
 
-		echo "<pre>";
-		print_r($_POST);
-
-		echo "</pre>";
-
 		//üye kayıt formundan gelen veriler
 		$kullanici_adi = mysql_real_escape_string($_POST['kadi']);
 		$eposta        = mysql_real_escape_string($_POST['eposta']);
@@ -22,6 +17,20 @@
 		if(!empty($kullanici_adi) && !empty($eposta)){
 			//parola işlemleri
 			if($sifre == $sifretekrar){
+
+				//veritabanı kayıt işlemleri
+				$sorgu = $db->query("INSERT INTO uye (kullaniciAdi,sifre,adSoyad,eposta,dogumTarihi,kayitIP,seviyeID)
+										VALUES ('$kullanici_adi','$sifre','$adsoyad','$eposta','$dtarih','$kayitIP',2)");
+
+				if($sorgu->rowCount()>=1){
+					echo "Kayıt Başarılı";
+				}else {
+					echo "Kayıt ekleme işlemi sırasında bir hata oluştu";
+				}
+
+				
+				//TODO : aynı kullanıcı ismine sahip üye tekrarını engelle;
+				//TODO : tarig ekleme fonksiyonları detaylandırılacak;
 
 			}else{
 				echo "<script>alert('parolalar uyuşmuyor');</script>";
