@@ -11,7 +11,16 @@
 			<h3>Hemen ücretsiz üye olun!</h3>
 
 			<?php if(isset($_GET['hata'])):?>
-			<div id="uyeKayitHata">Hata var</div>
+			<div id="uyeKayitHata">
+				<i class="fa fa-exclamation-circle" style="color:red;"></i>
+				<?php
+					switch($_GET['hata']){
+						case "alanlarbos": echo "Alanları Boş Bırakmayın"; break;
+						case "parolaFarkli" :echo "Parolalar uyuşmuyor";break;
+					}
+				?>
+
+			</div>
 			<?php endif; ?>
 
 			<form action="<?= $_SERVER['PHP_SELF']; ?>"  method="post" class="pure-form pure-form-aligned">

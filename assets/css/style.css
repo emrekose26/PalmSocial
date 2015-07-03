@@ -57,7 +57,7 @@ header img{
 
 }
 #content #signupform{
-	background: rgba(255,255,255,0.5); height: 530px; width: 600px; position: absolute; top:100px; float: left; border-radius: 25px;
+	background: rgba(255,255,255,0.5); height: 550px; width: 600px; position: absolute; top:90px; float: left; border-radius: 25px;
 }
 #content ul {
 	margin-left: 50px;
@@ -96,8 +96,9 @@ header img{
 
 #uyeKayitHata{
 	margin-left: 60px; margin-top: 10px; background:rgba(255, 44, 44, 0.5); width: 353px;
-	border:1px solid red; color:#fff; padding:3px 0 0 75px;
+	border:1px solid red; color:#fff; padding:3px 0 3px 75px;
 }
+
 
 /*footer.php*/
 footer{
