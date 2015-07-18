@@ -66,10 +66,10 @@ header img{
 	margin-left:650px ;
 }
 #content #signupform h1{
-	font-size: 50px; font-weight: bold; margin-top: 30px; margin-left: 60px;
+	font-size: 50px; font-weight: bold; margin-top: 25px; margin-left: 60px;
 }
 #content #signupform h3{
-	font-size:18px; font-weight: lighter; margin-top: 20px; margin-left: 60px;
+	font-size:18px; font-weight: lighter; margin-top: -13px; margin-left: 60px;
 }
 #content #signupform form{
 	margin-top: 10px; margin-left: 60px;
@@ -81,7 +81,7 @@ header img{
 	margin-left: 60px;
 }
 #signupform fieldset button{
-	width: 380px; margin-left: -125px; background-color:#8BC34A ; color: #fff; font-size: 20px; font-weight: lighter;
+	width: 402px; margin-left: -125px; background-color:#8BC34A ; color: #fff; font-size: 20px; font-weight: lighter;
 }
 
 #description img{
