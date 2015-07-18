@@ -27,9 +27,16 @@
 			<form action="<?= $_SERVER['PHP_SELF']; ?>"  method="post" class="pure-form pure-form-aligned">
 				<fieldset>
 					<div class="pure-control-group">
-						<label for="adsoyad">Ad Soyad:</label>
-						<input id="adsoyad" type="text" name="adsoyad" placeholder="Ad Soyad"
-							value="<?php if(isset($_GET['adsoyad'])){echo $_GET['adsoyad'];} ?>"
+						<label for="adsoyad">Ad:</label>
+						<input id="ad" type="text" name="ad" placeholder="Ad"
+							value="<?php if(isset($_GET['ad'])){echo $_GET['ad'];} ?>"
+							/>
+					</div>
+
+					<div class="pure-control-group">
+						<label for="soyad">Soyad:</label>
+						<input id="soyad" type="text" name="soyad" placeholder="Soyad"
+						       value="<?php if(isset($_GET['soyad'])){echo $_GET['soyad'];} ?>"
 							/>
 					</div>
 
@@ -54,11 +61,6 @@
 					<div class="pure-control-group">
 						<label for="sifretekrar">Şifre(Tekrar):</label>
 						<input type="password" name="sifretekrar" placeholder="Şifre(Tekrar)"/>
-					</div>
-
-					<div class="pure-control-group">
-						<label for="dtarih">Doğum Tarihi:</label>
-						<input type="datetime" name="dtarih" placeholder="Doğum Tarihi"/>
 					</div>
 
 					<div class="pure-controls">
