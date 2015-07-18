@@ -32,9 +32,8 @@
 										VALUES ('$kullanici_adi','$sifre','$adsoyad','$eposta','$dtarih','$kayitIP',2)");
 
 					if($sorgu->rowCount()>=1){
-						echo "Kayıt Başarılı";
 
-						//TODO : Profil sayfasına yönlendir
+						header("Location:profil.php");
 					}else {
 						echo "Kayıt ekleme işlemi sırasında bir hata oluştu";
 					}
