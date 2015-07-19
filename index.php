@@ -30,8 +30,8 @@
 					header("Location:index.php?hata=kadiVar&kadi=$kullanici_adi&eposta=$eposta&ad=$ad&soyad=$soyad");
 				}else{
 					//veritabanı kayıt işlemleri
-					$sorgu = $db->query("INSERT INTO uye (kullaniciAdi,sifre,ad,soyad,eposta,dogumTarihi,kayitIP,seviyeID)
-										VALUES ('$kullanici_adi','$sifre','$ad','$soyad','$eposta','$dtarih','$kayitIP',2)");
+					$sorgu = $db->query("INSERT INTO uye (kullaniciAdi,sifre,ad,soyad,eposta,kayitIP,seviyeID)
+										VALUES ('$kullanici_adi','$sifre','$ad','$soyad','$eposta','$kayitIP',2)");
 
 					if($sorgu->rowCount()>=1){
 
