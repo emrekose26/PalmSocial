@@ -3,20 +3,80 @@
 	//TODO: Aynı eposta ile kayıt engellencek.
 	session_start();
 	require "_inc/db.php";
+	require "_inc/functions.php";
 
 	if(!isset($_SESSION['UyeID'])){
 		header("Location:giris.php?Hata=GirisYap");
 	}else{
+		$uyeID = $_SESSION['UyeID'];
 		$sorguUyeProfil = $db->prepare("SELECT * FROM uye_profil WHERE uyeID=?");
-		$sorguUyeProfil->execute(array($_SESSION['UyeID']));
+		$sorguUyeProfil->execute(array($uyeID));
 
 
 		//her üyenin 1 tane profil oluşturması kontrolü için
 		$row_uyeProfil = $sorguUyeProfil->fetch(PDO::FETCH_OBJ);
 		$num_row_uyeProfil = $sorguUyeProfil->rowCount();
 
-		echo "profil saysı : ".$num_row_uyeProfil;
-	}
+		echo "profil sayısı : ".$num_row_uyeProfil;
+
+		//profil oluşturma formu gönderildiğinde
+		if(isset($_POST['uyeProfilOlusturSubmit'])){
+			echo "profl oluşturma formu gönderildi";
+
+			//formdan gelen verilern alınması
+			$ad          = formDegerAl($_POST['ad']);
+			$soyad       = formDegerAl($_POST['soyad']);
+			$dogumTarih  = formDegerAl($_POST['dogumTarih']);
+			$dogumYeri   = formDegerAl($_POST['dogumYeri']);
+			$yasadigiYer = formDegerAl($_POST['yasadigiYer']);
+
+			//resmin adının alınması
+			if(!empty($_FILES['resim']['name'])){
+				$resim = $_FILES['resim']['name'];
+			}else{
+				$resim = "profil-resim-yok.png";
+			}
+
+			//tablolara verilerin girilmesi
+			$sorguUyeProfilOlustur = "INSERT INTO uye_profil
+			(uyeID,ad,soyad,dogumTarih,dogumYeri,yasadigiYer,profilTarih)
+			VALUES
+			('$uyeID','$ad','$soyad','$dogumTarih','$dogumYeri','$yasadigiYer',NOW())
+			";
+
+			$sonucUyeProfilOlustur = $db->query($sorguUyeProfilOlustur);
+			//$sonucUyeProfilOlustur->execute();
+
+
+			if($sonucUyeProfilOlustur){
+				//profil bilgileri girildi,resim yüklenecek
+
+				$sorguProfilResim = "INSERT INTO uye_resim
+				(uyeID,resim)
+				VALUES
+				('$uyeID','$resim')
+				";
+
+				$sonucResim = $db->query($sorguProfilResim);
+				//$sonucResim->execute();
+
+				if($sonucResim){
+					//resim yüklenecek ve yönlendirme yapılacak
+					if($resim != "profil-resim-yok.png"){
+
+						//resmin yüklendiği isim değeri
+						$filename = $_FILES['resim']['tmp_name'];
+						//resmin yolu
+						$destination = "uploads/resim/uye/".$resim;
+
+						move_uploaded_file($filename,$destination);
+					}
+					header("Location:profil.php");
+				}
+			}
+		}
+
+	}//sessionda üye olup olmadığı kontrolü --son--
 ?>
 <!doctype html>
 <html lang="en">
@@ -24,6 +84,7 @@
 	<meta charset="UTF-8">
 	<title>Profil</title>
 	<link rel="icon" href="assets/images/palms-icon.ico"/>
+
 
 	<!--[if lt IE 9]>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
