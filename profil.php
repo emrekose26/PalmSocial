@@ -17,7 +17,7 @@
 		$row_uyeProfil = $sorguUyeProfil->fetch(PDO::FETCH_OBJ);
 		$num_row_uyeProfil = $sorguUyeProfil->rowCount();
 
-		echo "profil sayısı : ".$num_row_uyeProfil;
+		//echo "profil sayısı : ".$num_row_uyeProfil;
 
 		//profil oluşturma formu gönderildiğinde
 		if(isset($_POST['uyeProfilOlusturSubmit'])){
@@ -82,7 +82,16 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Profil</title>
+	<title>
+		<?php
+		//header kısmında üye ad soyadını veritabanından çekmek için
+		$sorguUyeAdSoyad = $db->prepare("SELECT ad,soyad,kullaniciAdi FROM uye WHERE uyeID=?");
+		$sorguUyeAdSoyad->execute(array($uyeID));
+		foreach($sorguUyeAdSoyad as $rowAdSoyad){
+			echo $rowAdSoyad['ad']." ".$rowAdSoyad['soyad']." Profili";
+		}
+		?>
+	</title>
 	<link rel="icon" href="assets/images/palms-icon.ico"/>
 
 
@@ -104,6 +113,9 @@
 <body>
 
 	<?php if($num_row_uyeProfil !=0 ){ ?>
+		<!--Profil oluşturulmuşsa-->
+	<?php include "_inc/profil/profil-header.inc" ?>
+
 	<ul id="profil-menu">
 		<li><a href="profil.php">Profilim</a></li>
 		<li><a href="arkadas.php">Arkadaşlarım</a></li>
@@ -113,7 +125,9 @@
 		<li><a href="muzik.php">Müziklerim</a></li>
 	</ul>
 	<?php }else{
-			include "_inc/profil-create.inc";
+			//profil oluşturma sayfası
+			include "_inc/profil/profil-header.inc";
+			include "_inc/profil/profil-create.inc";
 		}
 	?>
 

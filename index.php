@@ -91,9 +91,9 @@
 </head>
 <body>
 	<?php
-		include "_inc/header.inc";
-		include "_inc/content.inc";
-		include "_inc/footer.inc";
+		include "_inc/index/header.inc";
+		include "_inc/index/content.inc";
+		include "_inc/index/footer.inc";
 	?>
 </body>
 </html>
