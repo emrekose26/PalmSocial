@@ -1,3 +1,74 @@
 body,html{
 	font-family: 'Open Sans',sans-serif;
 }
+header{
+	width: 100%;
+	height: 50px;
+	background-color: #8BC34A;
+	position: relative;
+}
+#logo img{
+	height: 40px;
+	width: 40px;
+	margin-left: 40px;
+	margin-top: 3px;
+	position: absolute;
+}
+header form {
+	position: absolute;
+	right:20px;
+	top:5px;
+}
+header #menu{
+	position: absolute;
+	left: 90px;
+}
+header #menu li {
+	float: left;
+	list-style-type: none;
+	margin-left: 30px;
+}
+#menu li a{
+	text-decoration: none;
+	color:#fff;
+}
+#sag-menu{
+	position: absolute;
+	right: 300px;
+}
+#sag-menu li{
+	float: left;
+	list-style-type: none;
+	margin-left: 30px;
+}
+#sag-menu li a{
+	text-decoration: none;
+	color: #fff;
+}
+#sol,#orta,#sag{
+	float: left;
+}
+#sol{
+	border:1px solid #000;
+	width: 298px;
+	min-height: 800px;
+}
+#orta{
+	border-top:1px solid #000;
+	border-bottom:1px solid #000;
+	width: 768px;
+	min-height: 800px;
+}
+#orta h3{
+	padding: 5px 50px;
+	font-family: 'Roboto',sans-serif;
+	font-weight: lighter;
+}
+#orta form{
+	padding: 20px 50px;
+}
+#sag{
+	border:1px solid #000;
+	width: 279px;
+	min-height: 800px;
+}
