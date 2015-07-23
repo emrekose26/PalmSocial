@@ -32,31 +32,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="profil.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="profil.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/profil.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7157895" vertical-offset="1122" max-vertical-offset="2414">
-              <caret line="90" column="63" selection-start-line="90" selection-start-column="63" selection-end-line="90" selection-end-column="63" />
+            <state vertical-scroll-proportion="-13.730769" vertical-offset="1989" max-vertical-offset="3553">
+              <caret line="138" column="31" selection-start-line="138" selection-start-column="31" selection-end-line="138" selection-end-column="31" />
               <folding>
-                <marker date="1437461427185" expanded="true" signature="277:315" placeholder="SELECT * FRO..uye_profil..." />
-                <marker date="1437461427185" expanded="true" signature="1230:1404" placeholder="INSERT INTO ..." />
-                <marker date="1437461427185" expanded="true" signature="1623:1697" placeholder="INSERT INTO ..." />
-                <marker date="1437461427185" expanded="true" signature="2397:2448" placeholder="SELECT ad,so..uye..." />
+                <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1437654937498" expanded="true" signature="277:315" placeholder="SELECT * FRO..uye_profil..." />
+                <marker date="1437654937498" expanded="true" signature="642:704" placeholder="SELECT resim..uye_resim..." />
+                <marker date="1437654937498" expanded="true" signature="944:1013" placeholder="SELECT * FRO..uye_durum..." />
+                <marker date="1437654937498" expanded="true" signature="1186:1228" placeholder="SELECT * FRO..uye_baglanti..." />
+                <marker date="1437654937498" expanded="true" signature="2052:2226" placeholder="INSERT INTO ..." />
+                <marker date="1437654937498" expanded="true" signature="2445:2519" placeholder="INSERT INTO ..." />
+                <marker date="1437654937498" expanded="true" signature="3197:3248" placeholder="SELECT ad,so..uye..." />
+                <marker date="1437654937498" expanded="true" signature="4709:4752" placeholder="SELECT resim..uye_resim..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profil-create.inc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_inc/profil/profil-create.inc">
+      <file leaf-file-name="highslide-with-html.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/highslide/highslide-with-html.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-44.46154" vertical-offset="0" max-vertical-offset="1428">
-              <caret line="68" column="68" selection-start-line="68" selection-start-column="68" selection-end-line="68" selection-end-column="68" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="42279">
+              <caret line="17" column="16" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="16" />
               <folding>
-                <marker date="1437392520146" expanded="true" signature="73:107" placeholder="SELECT ad FR..uye..." />
-                <marker date="1437392520146" expanded="true" signature="192:229" placeholder="SELECT soyad..uye..." />
-                <marker date="1437392520146" expanded="true" signature="1615:1634" placeholder="SELECT * FRO..iller..." />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profil-iletisim-ekle.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/profil-iletisim-ekle.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.73110723" vertical-offset="638" max-vertical-offset="2091">
+              <caret line="62" column="62" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="62" />
+              <folding>
+                <marker date="1437659281220" expanded="true" signature="1410:1428" placeholder="SELECT * FRO..ulke..." />
+                <marker date="1437659281220" expanded="true" signature="2047:2102" placeholder="..." />
+                <marker date="1437659281220" expanded="true" signature="2478:2536" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profil-iletisim-ekle.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/profil-iletisim-ekle.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+              <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,8 +91,8 @@
       <file leaf-file-name="profil.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/profil.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1343">
-              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1853">
+              <caret line="8" column="22" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -96,14 +123,22 @@
         <option value="$PROJECT_DIR$/_inc/footer.inc" />
         <option value="$PROJECT_DIR$/_inc/functions.php" />
         <option value="$PROJECT_DIR$/_inc/profil-create.inc" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/cikisYap.php" />
-        <option value="$PROJECT_DIR$/_inc/profil/profil-header.inc" />
         <option value="$PROJECT_DIR$/_inc/profil/profil-create.inc" />
         <option value="$PROJECT_DIR$/assets/css/profil.css" />
+        <option value="$PROJECT_DIR$/_inc/profil/profil-header.inc" />
+        <option value="$PROJECT_DIR$/_inc/profil/profil-iletisim-ekle.inc" />
+        <option value="$PROJECT_DIR$/_inc/profil/profil-iletisim-ekle.php" />
         <option value="$PROJECT_DIR$/profil.php" />
+        <option value="$PROJECT_DIR$/assets/css/profil-iletisim-ekle.css" />
+        <option value="$PROJECT_DIR$/profil-iletisim-ekle.php" />
+        <option value="$PROJECT_DIR$/_inc/index/header.inc" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
+  </component>
+  <component name="PhpTemplates">
+    <option name="NEW_PHP_FILE_LAST_EXTENSION" value="inc" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.5.15" />
   <component name="ProjectFrameBounds">
@@ -138,6 +173,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -166,28 +202,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="uploads" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resim" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uye" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PalmSocial" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PalmSocial" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -206,7 +220,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -242,9 +256,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PalmSocial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PalmSocial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_inc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -260,10 +291,10 @@
       <recent name="C:\xampp\htdocs\PalmSocial\assets\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\PalmSocial" />
       <recent name="C:\xampp\htdocs\PalmSocial\_inc\profil" />
       <recent name="C:\xampp\htdocs\PalmSocial\_inc\index" />
       <recent name="C:\xampp\htdocs\PalmSocial\_inc" />
-      <recent name="C:\xampp\htdocs\PalmSocial" />
     </key>
   </component>
   <component name="RunManager">
@@ -333,17 +364,17 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32692307" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258427" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19969743" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20574887" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905295" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -398,36 +429,20 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="948" max-vertical-offset="2193">
-          <caret line="83" column="14" selection-start-line="83" selection-start-column="14" selection-end-line="83" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="995" max-vertical-offset="1768">
-          <caret line="55" column="110" selection-start-line="55" selection-start-column="110" selection-end-line="55" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_inc/index/content.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="774" max-vertical-offset="1343">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/profil.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1139">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
-            <marker date="1437461427185" expanded="true" signature="277:315" placeholder="SELECT * FRO..uye_profil..." />
-            <marker date="1437461427185" expanded="true" signature="1230:1404" placeholder="INSERT INTO ..." />
-            <marker date="1437461427185" expanded="true" signature="1623:1697" placeholder="INSERT INTO ..." />
-            <marker date="1437461427185" expanded="true" signature="2397:2448" placeholder="SELECT ad,so..uye..." />
+            <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1437654937498" expanded="true" signature="277:315" placeholder="SELECT * FRO..uye_profil..." />
+            <marker date="1437654937498" expanded="true" signature="642:704" placeholder="SELECT resim..uye_resim..." />
+            <marker date="1437654937498" expanded="true" signature="944:1013" placeholder="SELECT * FRO..uye_durum..." />
+            <marker date="1437654937498" expanded="true" signature="1186:1228" placeholder="SELECT * FRO..uye_baglanti..." />
+            <marker date="1437654937498" expanded="true" signature="2052:2226" placeholder="INSERT INTO ..." />
+            <marker date="1437654937498" expanded="true" signature="2445:2519" placeholder="INSERT INTO ..." />
+            <marker date="1437654937498" expanded="true" signature="3197:3248" placeholder="SELECT ad,so..uye..." />
+            <marker date="1437654937498" expanded="true" signature="4709:4752" placeholder="SELECT resim..uye_resim..." />
           </folding>
         </state>
       </provider>
@@ -437,9 +452,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1564">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1437392520146" expanded="true" signature="73:107" placeholder="SELECT ad FR..uye..." />
-            <marker date="1437392520146" expanded="true" signature="192:229" placeholder="SELECT soyad..uye..." />
-            <marker date="1437392520146" expanded="true" signature="1615:1634" placeholder="SELECT * FRO..iller..." />
+            <marker date="1437479706793" expanded="true" signature="-1:-1" placeholder="SELECT ad FR..uye..." />
+            <marker date="1437479706793" expanded="true" signature="-1:-1" placeholder="SELECT soyad..uye..." />
+            <marker date="1437479706793" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..iller..." />
           </folding>
         </state>
       </provider>
@@ -471,10 +486,15 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1437461427185" expanded="true" signature="277:315" placeholder="SELECT * FRO..uye_profil..." />
-            <marker date="1437461427185" expanded="true" signature="1230:1404" placeholder="INSERT INTO ..." />
-            <marker date="1437461427185" expanded="true" signature="1623:1697" placeholder="INSERT INTO ..." />
-            <marker date="1437461427185" expanded="true" signature="2397:2448" placeholder="SELECT ad,so..uye..." />
+            <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1437654937498" expanded="true" signature="277:315" placeholder="SELECT * FRO..uye_profil..." />
+            <marker date="1437654937498" expanded="true" signature="642:704" placeholder="SELECT resim..uye_resim..." />
+            <marker date="1437654937498" expanded="true" signature="944:1013" placeholder="SELECT * FRO..uye_durum..." />
+            <marker date="1437654937498" expanded="true" signature="1186:1228" placeholder="SELECT * FRO..uye_baglanti..." />
+            <marker date="1437654937498" expanded="true" signature="2052:2226" placeholder="INSERT INTO ..." />
+            <marker date="1437654937498" expanded="true" signature="2445:2519" placeholder="INSERT INTO ..." />
+            <marker date="1437654937498" expanded="true" signature="3197:3248" placeholder="SELECT ad,so..uye..." />
+            <marker date="1437654937498" expanded="true" signature="4709:4752" placeholder="SELECT resim..uye_resim..." />
           </folding>
         </state>
       </provider>
@@ -513,10 +533,15 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1437461427185" expanded="true" signature="277:315" placeholder="SELECT * FRO..uye_profil..." />
-            <marker date="1437461427185" expanded="true" signature="1230:1404" placeholder="INSERT INTO ..." />
-            <marker date="1437461427185" expanded="true" signature="1623:1697" placeholder="INSERT INTO ..." />
-            <marker date="1437461427185" expanded="true" signature="2397:2448" placeholder="SELECT ad,so..uye..." />
+            <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1437654937498" expanded="true" signature="277:315" placeholder="SELECT * FRO..uye_profil..." />
+            <marker date="1437654937498" expanded="true" signature="642:704" placeholder="SELECT resim..uye_resim..." />
+            <marker date="1437654937498" expanded="true" signature="944:1013" placeholder="SELECT * FRO..uye_durum..." />
+            <marker date="1437654937498" expanded="true" signature="1186:1228" placeholder="SELECT * FRO..uye_baglanti..." />
+            <marker date="1437654937498" expanded="true" signature="2052:2226" placeholder="INSERT INTO ..." />
+            <marker date="1437654937498" expanded="true" signature="2445:2519" placeholder="INSERT INTO ..." />
+            <marker date="1437654937498" expanded="true" signature="3197:3248" placeholder="SELECT ad,so..uye..." />
+            <marker date="1437654937498" expanded="true" signature="4709:4752" placeholder="SELECT resim..uye_resim..." />
           </folding>
         </state>
       </provider>
@@ -668,13 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
@@ -696,13 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_inc/index/header.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.10544816" vertical-offset="77" max-vertical-offset="646">
-          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_inc/index/footer.inc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23901582" vertical-offset="0" max-vertical-offset="569">
@@ -713,16 +724,6 @@
     <entry file="file://$PROJECT_DIR$/assets/images/palms-icon.ico">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_inc/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32864675" vertical-offset="0" max-vertical-offset="569">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding>
-            <element signature="e#6#86#0#PHP" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_inc/index/content.inc">
@@ -746,52 +747,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.0" vertical-offset="1199" max-vertical-offset="1768">
-          <caret line="95" column="27" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/profil.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1580">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
+        <state vertical-scroll-proportion="0.028571429" vertical-offset="0" max-vertical-offset="595">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_inc/profil/profil-header.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58070177" vertical-offset="77" max-vertical-offset="697">
-          <caret line="24" column="33" selection-start-line="22" selection-start-column="24" selection-end-line="27" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.59753954" vertical-offset="0" max-vertical-offset="697">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
           <folding>
-            <marker date="1437391962550" expanded="true" signature="-1:-1" placeholder="SELECT ad,so..uye..." />
+            <marker date="1437642102552" expanded="true" signature="-1:-1" placeholder="SELECT ad,so..uye..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_inc/profil/profil-create.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-44.46154" vertical-offset="0" max-vertical-offset="1428">
-          <caret line="68" column="68" selection-start-line="68" selection-start-column="68" selection-end-line="68" selection-end-column="68" />
+        <state vertical-scroll-proportion="1.6510792" vertical-offset="0" max-vertical-offset="1547">
+          <caret line="54" column="76" selection-start-line="54" selection-start-column="76" selection-end-line="54" selection-end-column="76" />
           <folding>
-            <marker date="1437392520146" expanded="true" signature="73:107" placeholder="SELECT ad FR..uye..." />
-            <marker date="1437392520146" expanded="true" signature="192:229" placeholder="SELECT soyad..uye..." />
-            <marker date="1437392520146" expanded="true" signature="1615:1634" placeholder="SELECT * FRO..iller..." />
+            <marker date="1437479706793" expanded="true" signature="-1:-1" placeholder="SELECT ad FR..uye..." />
+            <marker date="1437479706793" expanded="true" signature="-1:-1" placeholder="SELECT soyad..uye..." />
+            <marker date="1437479706793" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..iller..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/highslide/highslide-with-html.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="42279">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="16" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/profil.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7157895" vertical-offset="1122" max-vertical-offset="2414">
-          <caret line="90" column="63" selection-start-line="90" selection-start-column="63" selection-end-line="90" selection-end-column="63" />
+        <state vertical-scroll-proportion="-13.730769" vertical-offset="1989" max-vertical-offset="3553">
+          <caret line="138" column="31" selection-start-line="138" selection-start-column="31" selection-end-line="138" selection-end-column="31" />
           <folding>
-            <marker date="1437461427185" expanded="true" signature="277:315" placeholder="SELECT * FRO..uye_profil..." />
-            <marker date="1437461427185" expanded="true" signature="1230:1404" placeholder="INSERT INTO ..." />
-            <marker date="1437461427185" expanded="true" signature="1623:1697" placeholder="INSERT INTO ..." />
-            <marker date="1437461427185" expanded="true" signature="2397:2448" placeholder="SELECT ad,so..uye..." />
+            <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1437654937498" expanded="true" signature="277:315" placeholder="SELECT * FRO..uye_profil..." />
+            <marker date="1437654937498" expanded="true" signature="642:704" placeholder="SELECT resim..uye_resim..." />
+            <marker date="1437654937498" expanded="true" signature="944:1013" placeholder="SELECT * FRO..uye_durum..." />
+            <marker date="1437654937498" expanded="true" signature="1186:1228" placeholder="SELECT * FRO..uye_baglanti..." />
+            <marker date="1437654937498" expanded="true" signature="2052:2226" placeholder="INSERT INTO ..." />
+            <marker date="1437654937498" expanded="true" signature="2445:2519" placeholder="INSERT INTO ..." />
+            <marker date="1437654937498" expanded="true" signature="3197:3248" placeholder="SELECT ad,so..uye..." />
+            <marker date="1437654937498" expanded="true" signature="4709:4752" placeholder="SELECT resim..uye_resim..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/profil.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1853">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/profil-iletisim-ekle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_inc/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17926186" vertical-offset="0" max-vertical-offset="569">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32864675" vertical-offset="102" max-vertical-offset="2142">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <marker date="1437660847536" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..uye..." />
+            <marker date="1437660847536" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..uye..." />
+            <marker date="1437660847536" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1437660847536" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_inc/index/header.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44815466" vertical-offset="0" max-vertical-offset="646">
+          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#1;n#fieldset#0;n#form#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <marker date="1437660508833" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437660508833" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437660508833" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437660508833" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437660508833" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437660508833" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profil-iletisim-ekle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73110723" vertical-offset="638" max-vertical-offset="2091">
+          <caret line="62" column="62" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="62" />
+          <folding>
+            <marker date="1437659281220" expanded="true" signature="1410:1428" placeholder="SELECT * FRO..ulke..." />
+            <marker date="1437659281220" expanded="true" signature="2047:2102" placeholder="..." />
+            <marker date="1437659281220" expanded="true" signature="2478:2536" placeholder="..." />
           </folding>
         </state>
       </provider>
