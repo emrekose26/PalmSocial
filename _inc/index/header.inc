@@ -1,19 +1,19 @@
 <header>
 	<a href="index.php"><img src="assets/images/palmsociallogobaslik.png" alt="" title="Palm Social"/></a>
 	<div id="login">
-		<form action="" method="" class="pure-form">
+		<form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" class="pure-form">
 			<fieldset>
 				<ul id="giris-ust-alan">
 					<li>
-						<label for="kadi">Kullanıcı Adı</label>
-						<input type="text" id="kadi" name="kadi"/>
+						<label for="kadiGiris">Kullanıcı Adı</label>
+						<input type="text" id="kadiGiris" name="kadiGiris"/>
 					</li>
 					<li>
-						<label for="sifre">Şifre</label>
-						<input type="password" id="sifre" name="sifre"/>
+						<label for="sifreGiris">Şifre</label>
+						<input type="password" id="sifreGiris" name="sifreGiris"/>
 					</li>
 					<li>
-						<button type="submit" class="pure-button pure-button-primary">Oturum Aç</button>
+						<button type="submit" name="GirisYapSubmit" class="pure-button pure-button-primary">Oturum Aç</button>
 					</li>
 				</ul>
 				<ul id="giris-alt-alan">

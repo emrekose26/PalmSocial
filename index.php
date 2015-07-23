@@ -1,6 +1,28 @@
 <?php
 	session_start();
 	require_once "_inc/db.php";
+	require_once "_inc/functions.php";
+
+	if(isset($_POST['GirisYapSubmit'])){
+		//üye giriş formunda gelen veriler
+		$giris_kadi  = formDegerAl($_POST['kadiGiris']);
+		$giris_sifre = formDegerAl($_POST['sifreGiris']);
+		$giris_sifre = md5($giris_sifre);
+
+		if(!empty($giris_kadi) && !empty($giris_sifre)){
+			$sorguGiris = $db->prepare("SELECT * FROM uye WHERE kullaniciAdi = ? AND sifre = ? ");
+			$sorguGiris->execute(array($giris_kadi,$giris_sifre));
+			$rowGiris = $sorguGiris->fetch(PDO::FETCH_OBJ);
+
+			if($sorguGiris->rowCount()>0){
+				$_SESSION['UyeID'] =  $rowGiris->uyeID;
+				header("Location:profil.php");
+
+			}else{
+				echo "<script>alert('Kullanıcı Adı veya şifre hatalı');</script>";
+			}
+		}
+	}
 
 	if(isset($_POST['uyeKayitSubmit'])){
 
