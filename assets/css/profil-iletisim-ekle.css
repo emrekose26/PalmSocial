@@ -1,0 +1,6 @@
+form{
+	padding: 10px 25px;
+}
+form .pure-control-group #ulke,#sehir{
+	width: 215px;
+}
