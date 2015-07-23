@@ -1,5 +1,6 @@
 body,html{
 	font-family: 'Open Sans',sans-serif;
+	background-color: #e9eaed;
 }
 header{
 	width: 100%;
@@ -49,26 +50,55 @@ header #menu li {
 	float: left;
 }
 #sol{
-	border:1px solid #000;
+	border:1px solid #525a71;
 	width: 298px;
 	min-height: 800px;
+	background-color: #e9eaed;
 }
 #orta{
-	border-top:1px solid #000;
-	border-bottom:1px solid #000;
+	border-top:1px solid #525a71;
+	border-bottom:1px solid #525a71;
 	width: 768px;
 	min-height: 800px;
+	background-color: #fff;
+}
+#orta img{
+	float: left;
+	width: 35px;
+	height: 35px;
 }
 #orta h3{
 	padding: 5px 50px;
 	font-family: 'Roboto',sans-serif;
 	font-weight: lighter;
+	float: left;
+}
+fieldset legend{
+	font-weight: bold;
+}
+#orta img.fieldset-photo{
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	left:370px;
 }
 #orta form{
 	padding: 20px 50px;
 }
+#orta .pure-control-group{
+	margin-left: 90px;
+}
+#orta #dogumYeri {
+	width: 200px;
+}
+/* */
+fieldset #uyeProfilOlusturSubmit{
+	margin-left: 160px;
+	margin-top: 18px;
+}
 #sag{
-	border:1px solid #000;
+	border:1px solid #525a71;
 	width: 279px;
 	min-height: 800px;
+	background-color: #e9eaed;
 }
