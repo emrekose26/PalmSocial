@@ -19,6 +19,25 @@
 
 		//echo "profil sayısı : ".$num_row_uyeProfil;
 
+		//resim bilgisi alma
+		$sorguUyeProfilResim = $db->prepare("SELECT resim FROM uye_resim WHERE uyeID = ? AND resimTurID = ?");
+		$sorguUyeProfilResim->execute(array($uyeID,1));
+		$row_uyeProfilResim = $sorguUyeProfilResim->fetch(PDO::FETCH_OBJ);
+
+		//durum mesajını profilde gösterme
+		//son durumu profilin en üstünde yazdırma
+		$sorguDurumMesaj = $db->prepare("SELECT * FROM uye_durum WHERE uyeID = ? ORDER BY durumID DESC LIMIT 1");
+		$sorguDurumMesaj->execute(array($uyeID));
+		$row_DurumMesaj = $sorguDurumMesaj->fetch(PDO::FETCH_OBJ);
+
+
+		//üye bağlantı kaydetme
+		$sorguUyeBaglanti = $db->prepare("SELECT * FROM uye_baglanti WHERE uyeID = ? ");
+		$sorguUyeBaglanti->execute(array($uyeID));
+		$row_UyeBaglanti = $sorguUyeProfilResim->fetch(PDO::FETCH_OBJ);
+		$num_row_uyeBaglanti = $sorguUyeBaglanti->rowCount();
+
+
 		//profil oluşturma formu gönderildiğinde
 		if(isset($_POST['uyeProfilOlusturSubmit'])){
 			echo "profl oluşturma formu gönderildi";
@@ -84,7 +103,7 @@
 	<meta charset="UTF-8">
 	<title>
 		<?php
-		//header kısmında üye ad soyadını veritabanından çekmek için
+		//title da üye adını görüntülemek için
 		$sorguUyeAdSoyad = $db->prepare("SELECT ad,soyad,kullaniciAdi FROM uye WHERE uyeID=?");
 		$sorguUyeAdSoyad->execute(array($uyeID));
 		foreach($sorguUyeAdSoyad as $rowAdSoyad){
@@ -103,10 +122,27 @@
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 	<link rel="stylesheet" href="assets/css/profil.css"/>
 
-
 	<!--Fonts-->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+	<!--Scripts-->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/main.js"></script>
+
+
+	<!--HighSlide-->
+	<script type="text/javascript" src="highslide/highslide-with-html.js"></script>
+	<link rel="stylesheet" type="text/css" href="highslide/highslide.css" />
+	<script type="text/javascript">
+		hs.graphicsDir = 'highslide/graphics/';
+		hs.outlineType = 'rounded-white';
+		hs.wrapperClassName = 'draggable-header';
+		hs.minHeight = 800;
+		hs.minWidth = 600;
+		hs.showCredits = false;
+		hs.allowMultipleInstances = false;
+	</script>
 
 
 </head>
@@ -116,14 +152,128 @@
 		<!--Profil oluşturulmuşsa-->
 	<?php include "_inc/profil/profil-header.inc" ?>
 
-	<ul id="profil-menu">
-		<li><a href="profil.php">Profilim</a></li>
-		<li><a href="arkadas.php">Arkadaşlarım</a></li>
-		<li><a href="mesaj.php">Mesajlarım</a></li>
-		<li><a href="fotograf.php">Fotoğraflarım</a></li>
-		<li><a href="video.php">Videolarım</a></li>
-		<li><a href="muzik.php">Müziklerim</a></li>
-	</ul>
+		<div id="sol">
+
+			<?php
+			//üye profil fotoğrafını getirme
+			$sorguProfilResimGetir = $db->prepare("SELECT resim FROM uye_resim WHERE uyeID = ? ");
+			$sorguProfilResimGetir->execute(array($uyeID));
+			?>
+			<img src="<?php
+
+			foreach($sorguProfilResimGetir as $rowProfilResimGetir){
+				echo "uploads/resim/uye/".$rowProfilResimGetir['resim'];
+			}
+
+			?>" alt="" style="width: 120px; height: 120px;"/>
+
+
+
+			<ul id="profil-menu">
+				<li><a href="profil.php">Profilim</a></li>
+				<li><a href="arkadas.php">Arkadaşlarım</a></li>
+				<li><a href="mesaj.php">Mesajlarım</a></li>
+				<li><a href="fotograf.php">Fotoğraflarım</a></li>
+				<li><a href="video.php">Videolarım</a></li>
+				<li><a href="muzik.php">Müziklerim</a></li>
+			</ul>
+		</div>
+		<div id="orta">
+
+			<div id="durum"><?php echo $row_DurumMesaj->durumBaslik; ?></div>
+			<div id="profil-bilgiler">
+				<?php
+					$sorguUyeBilgiler = $db->prepare("SELECT * FROM uye_profil WHERE uyeID = ? ");
+					$sorguUyeBilgiler->execute(array($uyeID));
+					$row_UyeBilgiler = $sorguUyeBilgiler->fetch(PDO::FETCH_OBJ);
+				?>
+				<form class="pure-form pure-form-aligned">
+					<fieldset>
+						<div class="pure-control-group">
+							<label>Doğum Günü : </label>
+							<label><?php echo $row_UyeBilgiler->dogumTarih ?></label>
+						</div>
+
+						<div class="pure-control-group">
+							<label>Memleketi : </label>
+							<label><?php echo $row_UyeBilgiler->dogumYeri ?></label>
+						</div>
+
+						<div class="pure-control-group">
+							<label>Yaşadığı Yer</label>
+							<label><?php echo $row_UyeBilgiler->yasadigiYer ?></label>
+						</div>
+					</fieldset>
+				</form>
+			</div><!--profil bilgiler-->
+
+
+			<?php if($num_row_uyeBaglanti == 0): ?>
+				<div class="iletisim-olustur">
+					<a href="profil-iletisim-ekle.php" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )">
+						İletişim Bilgisi oluştur
+					</a>
+				</div>
+
+			<?php else: ?>
+				<!-- İletişim bilgileri girilmişse -->
+				<div class="profil-bilgiler-link">
+					<a href="#">Detaylı Bilgileri Göster</a>
+				</div>
+
+
+				<?php
+					$sorguBaglantiBilgiGetir = $db->prepare("SELECT * FROM uye_baglanti WHERE uyeID = ?");
+					$sorguBaglantiBilgiGetir->execute(array($uyeID));
+					$row_BaglantiBilgiGetir = $sorguBaglantiBilgiGetir->fetch(PDO::FETCH_OBJ);
+				?>
+				<div id="profil-detay-bilgiler">
+					<form class="pure-form pure-form-aligned">
+						<fieldset>
+							<div class="pure-control-group">
+								<label>Ülke : </label>
+								<label><?php echo $row_BaglantiBilgiGetir->ulke ?></label>
+							</div>
+
+							<div class="pure-control-group">
+								<label>Şehir : </label>
+								<label><?php echo $row_BaglantiBilgiGetir->sehir ?></label>
+							</div>
+
+							<div class="pure-control-group">
+								<label>Cep Telefon : </label>
+								<label><?php echo $row_BaglantiBilgiGetir->cepTelefon ?></label>
+							</div>
+
+							<div class="pure-control-group">
+								<label>Ev Telefon : </label>
+								<label><?php echo $row_BaglantiBilgiGetir->evTelefon ?></label>
+							</div>
+
+							<div class="pure-control-group">
+								<label>Web Site : </label>
+								<label><?php echo $row_BaglantiBilgiGetir->website ?></label>
+							</div>
+
+							<div class="pure-control-group">
+								<label>Facebook : </label>
+								<label><?php echo $row_BaglantiBilgiGetir->facebook ?></label>
+							</div>
+
+							<div class="pure-control-group">
+								<label>Twitter : </label>
+								<label><?php echo $row_BaglantiBilgiGetir->twitter ?></label>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+
+
+			<?php endif; ?>
+		</div>
+		<div id="sag"></div>
+
+
 	<?php }else{
 			//profil oluşturma sayfası
 			include "_inc/profil/profil-header.inc";
