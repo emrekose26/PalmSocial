@@ -10,7 +10,33 @@
 		//üye girişi var ve form gönderilmişse
 
 		if(isset($_POST['iletisimEkleSubmit'])){
-			echo "İletişim bilgileri gönderildi" ;
+
+			$uyeID = $_SESSION['UyeID'];
+
+			//iletişim ekle formundan gelen değerler
+			$ulke     = formDegerAl($_POST['ulke']);
+			$sehir    = formDegerAl($_POST['sehir']);
+			$ceptel   = formDegerAl($_POST['ceptel']);
+			$evtel    = formDegerAl($_POST['evtel']);
+			$website  = formDegerAl($_POST['website']);
+			$facebook = formDegerAl($_POST['facebook']);
+			$twitter  = formDegerAl($_POST['twitter']);
+
+			//ülke ve şehir bilgisinin boş olup olmadığı kontrolü
+			if(empty($ulke) || empty($sehir)){
+				header("Location:profil-iletisim-ekle.php?Hata=AlanlarBos");
+			}else{
+				$sorguBaglantiEkle = $db->query("INSERT INTO uye_baglanti
+					(uyeID,ulke,sehir,cepTelefon,evTelefon,website,facebook,twitter)
+					VALUES
+					('$uyeID','$ulke','$sehir','$ceptel','$evtel','$website','$facebook','$twitter')");
+
+				if($sorguBaglantiEkle->rowCount()>0){
+					$sayfa = $_SERVER['PHP_SELF'];
+					header("Location:$sayfa?Bilgi=BasariliKayit");
+				}
+			}
+
 		}
 	}
 
@@ -40,6 +66,7 @@
 </head>
 <body>
 
+	<?php if(!isset($_GET['Bilgi'])): ?>
 	<form action="<?php $_SERVER['PHP_SELF']; ?>" method="post" class="pure-form pure-form-aligned">
 		<h3>İletişim Bilgileri Ekle</h3>
 		<!--yer bilgisi-->
@@ -78,12 +105,12 @@
 
 			<div class="pure-control-group">
 				<label for="ceptel">Cep Telefonu</label>
-				<input id="ceptel" type="text" placeholder="Cep Telefonu">
+				<input id="ceptel" type="text" name="ceptel" placeholder="Cep Telefonu">
 			</div>
 
 			<div class="pure-control-group">
 				<label for="evtel">Ev Telefonu</label>
-				<input id="evtel" type="text" placeholder="Ev Telefonu">
+				<input id="evtel" type="text" name="evtel" placeholder="Ev Telefonu">
 			</div>
 		</fieldset><!--iletişim bilgisi son-->
 
@@ -93,23 +120,27 @@
 			<legend>Sosyal Medya Hesapları</legend>
 			<div class="pure-control-group">
 				<label for="website">Web Site:</label>
-				<input id="website" type="text" placeholder="Web Siteniz" value="http://">
+				<input id="website" type="text"  name="website" placeholder="Web Siteniz" value="http://">
 			</div>
 
 			<div class="pure-control-group">
 				<label for="facebook">Facebook</label>
-				<input id="facebook" type="text" placeholder="Facebook Hesabı" value="facebook.com/"/>
+				<input id="facebook" type="text" name="facebook" placeholder="Facebook Hesabı" value="facebook.com/"/>
 			</div>
 
 			<div class="pure-control-group">
 				<label for="twitter">Twitter</label>
-				<input id="twitter" type="text" placeholder="Twitter Hesabı" value="twitter.com/"/>
+				<input id="twitter" type="text" name="twitter" placeholder="Twitter Hesabı" value="twitter.com/"/>
 			</div>
 
 		</fieldset><!--sosyal medya bilgisi son-->
 		<button type="submit" name="iletisimEkleSubmit" class="pure-button pure-button-primary">Kaydet</button>
 	</form>
-
+	<?php else: ?>
+		<!-- İletişim bilgileri gönderildikten sonra çıkacak form -->
+		<h3>İletişim Bilgileri kaydedildi</h3>
+		<p><a href="#" onclick="parent.window.hs.getExpander().close();parent.window.location.reload();return false"> Sayfayı Kapatmak için tıklayınız </a></p>
+	<?php endif; ?>
 </body>
 </html>
 
