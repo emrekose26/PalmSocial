@@ -55,6 +55,45 @@ header #menu li {
 	min-height: 800px;
 	background-color: #e9eaed;
 }
+#sol #profil-sol{
+	min-height: 330px;
+	width: 250px;
+	margin-top: 20px;
+	margin-left: 20px;
+	border:1px solid #aaa;
+	border-radius: 10px;
+	background-color: #fff;
+}
+#profil-sol img{
+	width: 190px;
+	height: 190px;
+	border-radius: 100px;
+	display: table;
+	margin: 10px auto;
+}
+#profil-sol #profil-baslik{
+	background-color: #8BC34A;
+	color:#fff;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	width: 250px;
+	height: 30px;
+	padding-top: 5px;
+	text-align: center;
+	font-size: 19px;
+	font-family: 'Roboto',sans-serif;
+	font-weight: lighter;
+}#profil-sol #profil-duzenle h4{
+	display: table;
+	margin: 0 auto;
+	padding: 5px 0;
+ }
+#profil-sol #profil-duzenle h4 a{
+	text-decoration: none;
+	color:#01579B;
+	font-family: 'Roboto',sans-serif;
+	font-weight: lighter;
+}
 #orta{
 	border-top:1px solid #525a71;
 	border-bottom:1px solid #525a71;
@@ -90,6 +129,34 @@ fieldset legend{
 }
 #orta #dogumYeri {
 	width: 200px;
+}
+#orta #durum{
+	padding: 20px 20px 15px;
+	border-bottom: 1px solid #ddd;
+}
+#profil-bilgiler form,#profil-detay-bilgiler form{
+	padding-left: 0;
+	background-color: #eee;
+}
+#profil-bilgiler form label,#profil-detay-bilgiler form label{
+	text-align: left;
+	font-size: 13px;
+}
+#profil-detay-bilgiler form legend a{
+	color:#01579B;
+	text-decoration: none;
+	float: right;
+	font-size: 13px;
+	font-weight: lighter;
+}
+.profil-bilgiler-link,.iletisim-olustur{
+	padding: 10px 0;
+	background-color: #ddd;
+}
+.profil-bilgiler-link a,.iletisim-olustur a{
+	color:#525a71;
+	text-decoration: none;
+	padding-left: 90px;
 }
 /* */
 fieldset #uyeProfilOlusturSubmit{
