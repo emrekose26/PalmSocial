@@ -10,11 +10,11 @@
 
 
 		<ul id="menu">
-			<li><a href="#">Menü1</a></li>
-			<li><a href="#">Menü2</a></li>
-			<li><a href="#">Menü3</a></li>
-			<li><a href="#">Menü4</a></li>
-			<li><a href="#">Menü5</a></li>
+			<li><a href="#">Profil</a></li>
+			<li><a href="#">Arkadaşlar</a></li>
+			<li><a href="#">Mesajlar</a></li>
+			<li><a href="#">Multimedya</a></li>
+			<li><a href="#">Müzikler</a></li>
 		</ul>
 
 		<ul id="sag-menu">

@@ -11,11 +11,13 @@
 		<div id="sol"></div>
 
 		<div id="orta">
-			<h3>Henüz profil oluşturmadınız.Profil oluşturmak içim aşağıdaki bilgileri eksiksiz doldurunuz</h3>
+
+			<h3><img src="assets/images/info.png" alt=""/> &nbsp;Henüz profil oluşturmadınız.Profil oluşturmak için aşağıdaki bilgileri eksiksiz &nbsp;doldurunuz</h3>
 			<!-- resim dosyası seçmek için enctype="multipart/form-data" yapıldı-->
 			<form action="" method="post" enctype="multipart/form-data" class="pure-form pure-form-aligned">
 				<fieldset>
 					<legend>Kişisel Bilgiler</legend>
+					<img src="assets/images/edituser.png" class="fieldset-photo" alt=""/>
 					<div class="pure-control-group">
 						<label for="ad">Ad</label>
 						<input id="ad" name="ad" type="text" placeholder="Ad" value=<?php
@@ -26,7 +28,7 @@
 					</div>
 
 					<div class="pure-control-group">
-						<label for="ad">Soyad</label>
+						<label for="soyad">Soyad</label>
 						<input id="soyad" name="soyad" type="text" placeholder="Soyad" value=<?php
 						foreach($sorguSoyad as $row){
 							echo $row['soyad'];
@@ -35,8 +37,12 @@
 					</div>
 				</fieldset><!--kişisel bilgiler-->
 
+
+				<!--TODO:Doğum tarihi,tarih fonksiyonlarıyla detaylandırılacak-->
+				<!--TODO:Yaşadığı yer sayısı dropdownda arttılıcak.Ajax ile ülke seçimi ve şehir seçimi yapılacak-->
 				<fieldset>
 					<legend>Yer ve Tarih Bilgileri</legend>
+					<img src="assets/images/map-marker.png" class="fieldset-photo" alt=""/>
 					<div class="pure-control-group">
 						<label for="dogumTarih">Doğum Tarihi</label>
 						<input id="dogumTarih" name="dogumTarih" type="text" placeholder="Doğum Tarihi">
@@ -62,15 +68,16 @@
 				</fieldset><!--yer ve tarih bilgileri-->
 
 
-				<fielset>
+				<fieldset>
 					<legend>Profil Resmi</legend>
+					<img src="assets/images/photo.png" class="fieldset-photo" alt=""/>
 					<div class="pure-control-group">
 						<label for="resim">Profil Resmi</label>
 						<input id="resim" name="resim" type="file" >
 					</div>
 
-					<button type="submit" name="uyeProfilOlusturSubmit" class="pure-button pure-button-primary">Profil Oluştur</button>
-				</fielset>
+					<button type="submit" id="uyeProfilOlusturSubmit" name="uyeProfilOlusturSubmit" class="pure-button pure-button-primary">Profil Oluştur</button>
+				</fieldset>
 			</form>
 		</div><!--orta-->
 
