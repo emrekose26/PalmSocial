@@ -29,6 +29,7 @@
 		$sorguDurumMesaj = $db->prepare("SELECT * FROM uye_durum WHERE uyeID = ? ORDER BY durumID DESC LIMIT 1");
 		$sorguDurumMesaj->execute(array($uyeID));
 		$row_DurumMesaj = $sorguDurumMesaj->fetch(PDO::FETCH_OBJ);
+		$num_row_DurumMesaj = $sorguDurumMesaj->rowCount();
 
 
 		//üye bağlantı kaydetme
@@ -153,34 +154,38 @@
 	<?php include "_inc/profil/profil-header.inc" ?>
 
 		<div id="sol">
-
 			<?php
 			//üye profil fotoğrafını getirme
 			$sorguProfilResimGetir = $db->prepare("SELECT resim FROM uye_resim WHERE uyeID = ? ");
 			$sorguProfilResimGetir->execute(array($uyeID));
 			?>
-			<img src="<?php
 
-			foreach($sorguProfilResimGetir as $rowProfilResimGetir){
-				echo "uploads/resim/uye/".$rowProfilResimGetir['resim'];
-			}
+			<div id="profil-sol">
+				<div id="profil-baslik">Profil</div>
+				<img src="<?php
 
-			?>" alt="" style="width: 120px; height: 120px;"/>
+				foreach($sorguProfilResimGetir as $rowProfilResimGetir){
+					echo "uploads/resim/uye/".$rowProfilResimGetir['resim'];
+				}
 
+				?>" alt=""/>
 
-
-			<ul id="profil-menu">
-				<li><a href="profil.php">Profilim</a></li>
-				<li><a href="arkadas.php">Arkadaşlarım</a></li>
-				<li><a href="mesaj.php">Mesajlarım</a></li>
-				<li><a href="fotograf.php">Fotoğraflarım</a></li>
-				<li><a href="video.php">Videolarım</a></li>
-				<li><a href="muzik.php">Müziklerim</a></li>
-			</ul>
-		</div>
+				<div id="profil-duzenle">
+					<h4><a href="#">Profil Resmini Değitir</a></h4>
+					<h4><a href="#">Profili Düzenle</a></h4>
+				</div><!--profil-duzenle-->
+			</div><!--profil-sol-->
+		</div><!--sol-->
 		<div id="orta">
 
-			<div id="durum"><?php echo $row_DurumMesaj->durumBaslik; ?></div>
+			<div id="durum"><?php
+				if($num_row_DurumMesaj==0){
+					echo "Merhaba PalmSocial!";
+				}else {
+					//son eklenen durum yazdırılır.
+					echo $row_DurumMesaj->durumBaslik;
+				}
+				?></div>
 			<div id="profil-bilgiler">
 				<?php
 					$sorguUyeBilgiler = $db->prepare("SELECT * FROM uye_profil WHERE uyeID = ? ");
@@ -189,6 +194,7 @@
 				?>
 				<form class="pure-form pure-form-aligned">
 					<fieldset>
+						<legend style="margin-left: 20px;">Profil Bilgileri</legend>
 						<div class="pure-control-group">
 							<label>Doğum Günü : </label>
 							<label><?php echo $row_UyeBilgiler->dogumTarih ?></label>
@@ -226,18 +232,30 @@
 					$sorguBaglantiBilgiGetir = $db->prepare("SELECT * FROM uye_baglanti WHERE uyeID = ?");
 					$sorguBaglantiBilgiGetir->execute(array($uyeID));
 					$row_BaglantiBilgiGetir = $sorguBaglantiBilgiGetir->fetch(PDO::FETCH_OBJ);
+
+					$baglantiUlke = $row_BaglantiBilgiGetir->ulke;
+					$baglantiSehir = $row_BaglantiBilgiGetir->sehir;
+
+					$sorguUlkeSehir = $db->prepare("SELECT ulke.ulkeID,sehir.sehirID,ulkeAd,sehirAd FROM ulke INNER JOIN sehir ON ulke.ulkeID = sehir.ulkeID WHERE ulke.ulkeID = ? AND sehir.sehirID = ?
+");
+					$sorguUlkeSehir->execute(array($baglantiUlke,$baglantiSehir));
+					$row_ulkeSehir = $sorguUlkeSehir->fetch(PDO::FETCH_OBJ);
+
+
+
 				?>
 				<div id="profil-detay-bilgiler">
 					<form class="pure-form pure-form-aligned">
 						<fieldset>
+							<legend style="margin-left:20px;">İletişim Bilgileri <a href="#">Düzenle</a></legend>
 							<div class="pure-control-group">
 								<label>Ülke : </label>
-								<label><?php echo $row_BaglantiBilgiGetir->ulke ?></label>
+								<label><?php echo $row_ulkeSehir->ulkeAd ?></label>
 							</div>
 
 							<div class="pure-control-group">
 								<label>Şehir : </label>
-								<label><?php echo $row_BaglantiBilgiGetir->sehir ?></label>
+								<label><?php echo $row_ulkeSehir->sehirAd ?></label>
 							</div>
 
 							<div class="pure-control-group">
