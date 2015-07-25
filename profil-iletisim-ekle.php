@@ -22,6 +22,7 @@
 			$facebook = formDegerAl($_POST['facebook']);
 			$twitter  = formDegerAl($_POST['twitter']);
 
+
 			//ülke ve şehir bilgisinin boş olup olmadığı kontrolü
 			if(empty($ulke) || empty($sehir)){
 				header("Location:profil-iletisim-ekle.php?Hata=AlanlarBos");
@@ -60,7 +61,25 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
+	<!--Scripts-->
+	<script src="assets/js/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$('#ulke').change(function(){
+				var val  = $(this).val();
+				var ulke = "ulkeID="+val;
+				$.ajax({
+					type:"POST",
+					url:"ajax/ulke-sehir.php",
+					data:ulke,
+					success:function(veri){
+						$('#sehir').html(veri);
+					}
+				});
+			})
+		});
 
+	</script>
 
 
 </head>
@@ -72,28 +91,25 @@
 		<!--yer bilgisi-->
 		<fieldset>
 			<legend>Yer Bilgisi</legend>
-			<!--TODO://Ülkelere göre şehirler ajax ile veritabanından çekilecek -->
 			<div class="pure-control-group">
 				<label for="ulke" name="ulke">Ülke :</label>
 				<select name="ulke" id="ulke">
+					<option value="0">Lütfen Seçiniz</option>
 					<?php
 						$sorguUlkeGetir = $db->query("SELECT * FROM ulke");
 						$sorguUlkeGetir->execute();
 
 						foreach($sorguUlkeGetir as $rowUlke){
-							echo "<option id=".$rowUlke['ulkeID'].">".$rowUlke['ulkeAd']."</option>";
+							echo "<option value=".$rowUlke['ulkeID'].">".$rowUlke['ulkeAd']."</option>";
 						}
 					?>
 				</select>
 			</div>
 
-			<!--TODO:Şehir tablosu veritabanına dahil edilecek -->
 			<div class="pure-control-group">
 				<label for="sehir" name="sehir">Şehir :</label>
 				<select name="sehir" id="sehir">
-					<option value="sehir1">Şehir1</option>
-					<option value="sehir2">Şehir2</option>
-					<option value="sehir3">Şehir3</option>
+					<option value="0">Lütfen Seçiniz</option>
 				</select>
 			</div>
 		</fieldset><!--yer bilgisi son-->
